@@ -3,7 +3,7 @@
 
 #include <fstream>
 #include <regex>
-#include <string>
+
 
 namespace LinuxParser {
 // Paths
@@ -29,7 +29,7 @@ std::string Kernel();
 
 // CPU
 enum CPUStates {
-  kUser_ = 0,
+  kUser_ = 1,
   kNice_,
   kSystem_,
   kIdle_,
@@ -40,11 +40,12 @@ enum CPUStates {
   kGuest_,
   kGuestNice_
 };
-std::vector<std::string> CpuUtilization();
+std::vector<std::string> CpuUtilization(std::string coreNumber = "");
 long Jiffies();
 long ActiveJiffies();
 long ActiveJiffies(int pid);
 long IdleJiffies();
+//std::string getCpuPercent(int pid)
 
 // Processes
 std::string Command(int pid);
@@ -52,6 +53,7 @@ std::string Ram(int pid);
 std::string Uid(int pid);
 std::string User(int pid);
 long int UpTime(int pid);
+float getCpuPercent(int pid);
 };  // namespace LinuxParser
 
 #endif
