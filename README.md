@@ -3,7 +3,7 @@
 ![System Monitor](images/monitor.png)
 
 - This project builds a **system monitor** that resembles [Htop](https://en.wikipedia.org/wiki/Htop) program to monitor **Linux OS**.
-- It uses [ncurses] library (https://www.gnu.org/software/ncurses/) to facilitate text-based graphical output in the terminal. 
+- It uses [ncurses](https://www.gnu.org/software/ncurses/) library to facilitate text-based graphical output in the terminal. 
 
 ## Make
 This project uses [Make](https://www.gnu.org/software/make/). The Makefile has four targets:
